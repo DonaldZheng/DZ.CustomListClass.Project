@@ -7,7 +7,7 @@ using CustomListLutetium;
 
 namespace CustomListLutetiumUnitTesting
 {
-    class RemoveMethodUnitTests
+    class OverloadMethodToString
     {
     }
 }

@@ -10,7 +10,7 @@ namespace CustomListLutetiumUnitTesting
         // checking the index of the item on your CustomList<T> to make sure it was added
         // check the count of the list to see if it was added
         // check the capacity of our list to make sure it increases when we add an item beyond the original capacity
-
+       
         [TestMethod]
         public void Add_Item_CountIncreasesByOne()
         {
@@ -21,19 +21,39 @@ namespace CustomListLutetiumUnitTesting
             int expected = 1;
             int actual;
 
-            // Act
-        
-
+            
+            //Act
             collectionOfNumbers.Add(number);
             actual = collectionOfNumbers.Count;
 
             // Assert
             Assert.AreEqual(expected, actual);
         }
-        // make a commit
-        // Finished first Add method test in AddMethodUnitTests class to test that the count increases by one when an item is added to the list
+        [TestMethod]
+        public void Add_Item_CapacityIncreased()
+        {
+            //Arrange 
+            CustomList<int> capacityItem = new CustomList<int>();
+            int itemsInCapacity = 9;
+            int expected = 10;
+            int actual;
 
-        // write next test - get it failing
-        // make a commit 
+            //Act USE a for loop to add item
+            for (int i = 0; i < itemsInCapacity; i++)
+            {
+                capacityItem.Add(i);
+            }
+            //Assert 
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Add_Item_WasAdded()
+        {
+            // Arrange 
+
+            // Act
+
+            // Assert
+        }
     }
 }

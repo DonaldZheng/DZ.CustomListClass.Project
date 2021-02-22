@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddMethodUnitTests.cs" />
+    <Compile Include="OverloadMethodToString.cs" />
+    <Compile Include="OverloadToAddTwoInstances.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RemoveMethodUnitTests.cs" />
   </ItemGroup>
