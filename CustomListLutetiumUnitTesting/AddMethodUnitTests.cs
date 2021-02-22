@@ -63,12 +63,14 @@ namespace CustomListLutetiumUnitTesting
             int actual;
 
             //Act USE a for loop to add item
-            
-            for (int i = 0; i < itemsInCapacity.Count; i++)
-            {
-                capacityItem.Add(i);
-                actual = capacityItem.Capacity;
-            }
+            capacityItem.Add(itemsInCapacity);
+            capacityItem.Add(itemsInCapacity2);
+            capacityItem.Add(itemsInCapacity3);
+            capacityItem.Add(itemsInCapacity4);
+            capacityItem.Add(itemsInCapacity5);
+
+            actual = capacityItem.Capacity;
+
             //Assert 
             Assert.AreEqual(expected, actual);
         }
