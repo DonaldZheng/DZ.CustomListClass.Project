@@ -17,7 +17,7 @@ namespace CustomListLutetiumUnitTesting
             // Arrange
             CustomList<int> collectionOfNumbers = new CustomList<int>();
             
-            int number = 9;
+            int number = 4;
             int expected = 1;
             int actual;
 
@@ -34,11 +34,18 @@ namespace CustomListLutetiumUnitTesting
         {
             //Arrange 
             CustomList<int> capacityItem = new CustomList<int>();
-            int itemsInCapacity = 9;
-            int expected = 10;
+            capacityItem.Add(1);
+            capacityItem.Add(2);
+            capacityItem.Add(3);
+            capacityItem.Add(4);
+            capacityItem.Add(5);
+
+            int itemsInCapacity = 8;
+            int expected = 8;
             int actual;
 
             //Act USE a for loop to add item
+            actual = capacityItem.Count;
             for (int i = 0; i < itemsInCapacity; i++)
             {
                 capacityItem.Add(i);

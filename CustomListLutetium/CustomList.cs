@@ -9,14 +9,33 @@ namespace CustomListLutetium
     public class CustomList<T>
     {
 
-        public void Add()
-        {
-            // write code to implement and commit every time you get something working
-        }
+        private T[] _items;
+        private int count;
+        private int capacity;
 
-        public void Remove()
+    }
+    public CustomList()
+    {
+        count = 0;
+        capactiy = 4;
+        _items = new T[capacity];
+    }
+
+    public void Add(Task itemToAdd)
+    {
+        if (count == capacity)
         {
-            // implement here!
+            // create new array/resize array 
+            // move items over 
+            // new array is now _items array
         }
+        _items[count] = itemToAdd;
+        count++;
+        // write code to implement and commit every time you get something working
+    }
+
+    public void Remove()
+    {
+        // implement here!
     }
 }
