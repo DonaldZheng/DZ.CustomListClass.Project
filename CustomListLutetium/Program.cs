@@ -9,18 +9,7 @@ namespace CustomListLutetium
     class Program
     {
         static void Main(string[] args)
-        {
-            List<int> myList = new List<int>();
-            myList.Add(int);
-
-            myList.Add(1);
-            myList.Add(2);
-            myList.Add(3);
-            myList.Add(4);
-            myList.Add(5);
-
-            myList.Capacity = 4;
-          
+        { 
 
         }
 
