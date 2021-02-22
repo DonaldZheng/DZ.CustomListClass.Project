@@ -53,15 +53,21 @@ namespace CustomListLutetiumUnitTesting
         {
             //Arrange 
             CustomList<int> capacityItem = new CustomList<int>();
-            int itemsInCapacity = 8;
+            int itemsInCapacity = 1;
+            int itemsInCapacity2 = 2;
+            int itemsInCapacity3 = 3;
+            int itemsInCapacity4 = 4;
+            int itemsInCapacity5 = 5;
+
             int expected = 8;
-            int actual = capacityItem;
+            int actual;
 
             //Act USE a for loop to add item
-            actual = capacityItem.Count;
-            for (int i = 0; i < itemsInCapacity; i++)
+            
+            for (int i = 0; i < itemsInCapacity.Count; i++)
             {
                 capacityItem.Add(i);
+                actual = capacityItem.Capacity;
             }
             //Assert 
             Assert.AreEqual(expected, actual);
@@ -81,6 +87,23 @@ namespace CustomListLutetiumUnitTesting
             actual = ItemsByFour.Count;
 
             Assert.AreEqual(expected, actual);
+
+        }
+
+        [TestMethod]
+        public void Add_TwoItems_ToList_ReturnSecondNumber()
+        {
+            CustomList<int> returnTwoItemsToList = new CustomList<int>();
+            int numberOne = 2;
+            int numberTwo = 5;
+            int expected = 5;
+            int actual;
+
+            returnTwoItemsToList.Add(numberOne);
+            returnTwoItemsToList.Add(numberTwo);
+            actual = returnTwoItemsToList[1]; // index 0 is 2 index 1 is 5
+
+            Assert.AreEqual(expected, actual); 
 
 
         }
