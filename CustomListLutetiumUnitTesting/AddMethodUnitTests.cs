@@ -12,6 +12,25 @@ namespace CustomListLutetiumUnitTesting
         // check the capacity of our list to make sure it increases when we add an item beyond the original capacity
        
         [TestMethod]
+        public void Check_IndexOnList_Added()
+        {
+            CustomList<int> indexNumber = new CustomList<int>();
+
+            // Arrange 
+            int number = 5;
+            int expected = 5;
+            int actual;
+
+
+            // Act
+            indexNumber.Add(number);
+            actual = indexNumber[0];
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void Add_Item_CountIncreasesByOne()
         {
             // Arrange
@@ -34,15 +53,9 @@ namespace CustomListLutetiumUnitTesting
         {
             //Arrange 
             CustomList<int> capacityItem = new CustomList<int>();
-            capacityItem.Add(1);
-            capacityItem.Add(2);
-            capacityItem.Add(3);
-            capacityItem.Add(4);
-            capacityItem.Add(5);
-
             int itemsInCapacity = 8;
             int expected = 8;
-            int actual;
+            int actual = capacityItem;
 
             //Act USE a for loop to add item
             actual = capacityItem.Count;
@@ -53,14 +66,23 @@ namespace CustomListLutetiumUnitTesting
             //Assert 
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
-        public void Add_Item_WasAdded()
+        public void Add_Items_IncrementByFour()
         {
-            // Arrange 
+            CustomList<int> ItemsByFour = new CustomList<int>();
+            int numberOne = 3;
+            int numberTwo = 5;
+            int expected = 4;
+            int actual;
 
-            // Act
+            ItemsByFour.Add(numberOne);
+            ItemsByFour.Add(numberTwo);
+            actual = ItemsByFour.Count;
 
-            // Assert
+            Assert.AreEqual(expected, actual);
+
+
         }
     }
 }

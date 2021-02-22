@@ -9,7 +9,7 @@ namespace CustomListLutetium
     public class CustomList<T>
     {
 
-        private T[] _items;
+        private T[] _items; // [] array
         private int count;
         private int capacity;
 
@@ -36,5 +36,5 @@ namespace CustomListLutetium
         {
             // implement here!
         }
-    }    
+
 }
