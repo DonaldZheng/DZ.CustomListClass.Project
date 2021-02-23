@@ -46,9 +46,12 @@ namespace CustomListLutetium
         {
             if (count == capacity)
             {
-                T[] _items = new T[5];
-               _items.count + 1;
-                itemToAdd.
+                T[] tempList = new T[capacity *= 2]; // capacity must be x2 if array is passed 4, 8, 16 etc 
+                for (int i = 0; i < count; i++)
+                {
+                    tempList[i] = _items[i];
+                }
+                _items = tempList;
 
                 // create new array/ resize array 
                 // move items over 
