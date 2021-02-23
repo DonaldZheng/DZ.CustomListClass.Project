@@ -10,31 +10,51 @@ namespace CustomListLutetium
     {
 
         private T[] _items; // [] array
-        private int count;
-        private int capacity;
+
+        // use get and set??
+        private int Count
+        {
+            get
+            {
+                return Count;
+            }
+
+            set
+            {
+                Count = value;
+            }
+        }
+        private int Capacity
+        {
+            get
+            {
+                return Capacity;
+            }
+        }
 
         public CustomList()
         {
-            count = 0;
-            capacity = 4;
-            _items = new T[capacity];
+            Count = 0;
+            Capacity = 4;
+            _items = new T[Capacity];
         }
 
         public void Add(T itemToAdd)
         {
-            if (count == capacity)
+            if (Count == Capacity)
             {
                 // create new array/ resize array 
                 // move items over 
                 // new array is now _items array
             }
-            _items[count] = itemToAdd;
-            count++;
-            // write code to implement and commit every time you get something working
+            _items[Count] = itemToAdd;
+            Count++;
+
         }
         public void Remove()
         {
             // implement here!
         }
 
+    }
 }
