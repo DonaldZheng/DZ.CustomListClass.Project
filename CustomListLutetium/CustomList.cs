@@ -58,7 +58,7 @@ namespace CustomListLutetium
             count++;
 
         }
-        public void Remove()
+        public void Remove(T itemToRemove)
         {
             // implement here!
         }

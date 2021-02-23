@@ -20,7 +20,30 @@ namespace CustomListLutetiumUnitTesting
 
             // Act
             indexNumber.Remove(number);
-            actual = indexNumber[0];
+            actual = indexNumber[1];
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+        [TestMethod]
+        public void Add_Item_CountDecreasedByOne()
+        {
+            // Arrange
+            CustomList<int> itemsToRemove = new CustomList<int>();
+            int numberOne = 1;
+            int numberTwo = 2;
+            int numberThree = 3;
+            int expected = 1;
+            int actual;
+
+
+            //Act
+            itemsToRemove.Add(numberOne);
+            itemsToRemove.Add(numberTwo);
+            itemsToRemove.Add(numberThree);
+            itemsToRemove.Remove(numberTwo);
+            actual = itemsToRemove.Count;
 
             // Assert
             Assert.AreEqual(expected, actual);
