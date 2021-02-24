@@ -50,21 +50,39 @@ namespace CustomListLutetiumUnitTesting
 
         }
         [TestMethod]
-        public void Add_Items_DecrementByFour()
+        public void Add_Items_DecrementByThree()
         {
             CustomList<int> ItemsByFour = new CustomList<int>();
-            int numberOne = 3;
-            int numberTwo = 5;
+            int numberOne = 1;
+            int numberTwo = 2;
+            int numberThree = 3;
+            int numberFour = 4;
+            int numberFive = 5;
+            int numberSix = 6;
             int expected = 4;
             int actual;
-
+            
+            //add
             ItemsByFour.Add(numberOne);
             ItemsByFour.Add(numberTwo);
+            ItemsByFour.Add(numberThree);
+            ItemsByFour.Add(numberFour);
+            ItemsByFour.Add(numberFive);
+            ItemsByFour.Add(numberSix);
+
+            //remove 
+            ItemsByFour.Remove(numberFour);
+            ItemsByFour.Remove(numberFive);
+            ItemsByFour.Remove(numberSix);
+
+
             actual = ItemsByFour.Count;
 
             Assert.AreEqual(expected, actual);
 
         }
 
+        // no capacity 
+        // remove [1] at which index 
     }
 }
