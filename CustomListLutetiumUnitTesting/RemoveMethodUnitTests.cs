@@ -5,7 +5,7 @@ using CustomListLutetium;
 namespace CustomListLutetiumUnitTesting
 {
     [TestClass]
-    class RemoveMethodUnitTests
+    public class RemoveMethodUnitTests
     {
         [TestMethod]
         public void Check_IndexOnList_Removed()

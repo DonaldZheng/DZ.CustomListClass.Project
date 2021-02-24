@@ -86,7 +86,16 @@ namespace CustomListLutetium
         }
         public void Remove(T itemToRemove)
         {
-            // implement here!
+            if ()
+            {
+                T[] removeList = new T[];
+                for (int i = 0; i < length; i--)
+                {
+
+                }
+            }
+            _items[count] = itemToRemove;
+            count--;
         }
 
         public void FindIndex()
