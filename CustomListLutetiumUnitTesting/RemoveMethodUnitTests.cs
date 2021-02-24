@@ -61,7 +61,7 @@ namespace CustomListLutetiumUnitTesting
             int numberSix = 6;
             int expected = 4;
             int actual;
-            
+
             //add
             ItemsByFour.Add(numberOne);
             ItemsByFour.Add(numberTwo);
@@ -78,6 +78,32 @@ namespace CustomListLutetiumUnitTesting
 
             actual = ItemsByFour.Count;
 
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [TestMethod]
+        public void Remove_Item_AtIndexTwo()
+        {
+            //Arrange
+            CustomList<int> RemoveAtIndexTwo = new CustomList<int>();
+            int numberOne = 1; // 0
+            int numberTwo = 2; 
+            int numberThree = 3;
+            int numberFour = 4; 
+            int expected = 3; // have 3 left over 
+            int actual;
+        
+            //Act
+            RemoveAtIndexTwo.Add(numberOne);
+            RemoveAtIndexTwo.Add(numberTwo);
+            RemoveAtIndexTwo.Add(numberThree);
+            RemoveAtIndexTwo.Add(numberFour);
+            RemoveAtIndexTwo.Remove(numberThree);
+
+            actual = RemoveAtIndexTwo.Count;
+
+            //Assert
             Assert.AreEqual(expected, actual);
 
         }
