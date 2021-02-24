@@ -47,6 +47,24 @@ namespace CustomListLutetiumUnitTesting
 
             // Assert
             Assert.AreEqual(expected, actual);
+
         }
+        [TestMethod]
+        public void Add_Items_DecrementByFour()
+        {
+            CustomList<int> ItemsByFour = new CustomList<int>();
+            int numberOne = 3;
+            int numberTwo = 5;
+            int expected = 4;
+            int actual;
+
+            ItemsByFour.Add(numberOne);
+            ItemsByFour.Add(numberTwo);
+            actual = ItemsByFour.Count;
+
+            Assert.AreEqual(expected, actual);
+
+        }
+
     }
 }

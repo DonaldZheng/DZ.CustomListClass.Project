@@ -32,6 +32,20 @@ namespace CustomListLutetium
                 capacity = value;
             }
         }
+        public T this[int index]
+        {
+
+            get
+            {
+                return _items[index];
+            }
+
+            set
+            {
+                _items[index] = value;
+            }
+        }
+
 
         //constructor
         public CustomList()
