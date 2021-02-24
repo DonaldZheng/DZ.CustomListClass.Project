@@ -107,8 +107,31 @@ namespace CustomListLutetiumUnitTesting
             Assert.AreEqual(expected, actual);
 
         }
+        [TestMethod]
+        public void Remove_TwoItems_ToList_ReturnSecondNumber()
+        {
+            CustomList<int> returnTwoItemsToList = new CustomList<int>();
+            int numberOne = 1;
+            int numberTwo = 2;
+            int numberThree = 3;
+            int numberFour = 4;
+            int numberFive = 5;
+            int expected = 5;
+            int actual;
 
-        // no capacity 
-        // remove [1] at which index 
+            returnTwoItemsToList.Add(numberOne);
+            returnTwoItemsToList.Add(numberTwo);
+            returnTwoItemsToList.Add(numberThree);
+            returnTwoItemsToList.Add(numberFour);
+            returnTwoItemsToList.Add(numberFive);
+            returnTwoItemsToList.Remove(numberFive);
+            returnTwoItemsToList.Remove(numberFour);
+
+            actual = returnTwoItemsToList[numberThree];
+
+            Assert.AreEqual(expected, actual);
+
+
+        }
     }
 }
