@@ -80,11 +80,16 @@ namespace CustomListLutetiumUnitTesting
             CustomList<int> ItemsByFour = new CustomList<int>();
             int numberOne = 3;
             int numberTwo = 5;
+            int numberThree = 4;
+            int numberFour = 5;
             int expected = 4;
             int actual;
 
             ItemsByFour.Add(numberOne);
             ItemsByFour.Add(numberTwo);
+            ItemsByFour.Add(numberThree);
+            ItemsByFour.Add(numberFour);
+
             actual = ItemsByFour.Count;
 
             Assert.AreEqual(expected, actual);

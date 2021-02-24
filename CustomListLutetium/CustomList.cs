@@ -37,13 +37,22 @@ namespace CustomListLutetium
 
             get
             {
+                if (index < 0 || index >= count)
+                {
+                    throw new IndexOutOfRangeException("Input is out of range exception ");
+                }
                 return _items[index];
             }
 
             set
             {
+                if (index < 0 || index >= count)
+                {
+                    throw new IndexOutOfRangeException("Input is out of range exception ");
+                }
                 _items[index] = value;
             }
+            
         }
 
 
