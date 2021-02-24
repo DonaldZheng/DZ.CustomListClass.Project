@@ -86,13 +86,15 @@ namespace CustomListLutetium
         }
         public void Remove(T itemToRemove)
         {
-            if ()
+            if (count != capacity)
             {
-                T[] removeList = new T[];
-                for (int i = 0; i < length; i--)
-                {
+                T[] removeListArray = new T[capacity];
 
+                for (int i = 0; i > count; i--)
+                {
+                    removeListArray[i] = _items[i];
                 }
+                _items = removeListArray;
             }
             _items[count] = itemToRemove;
             count--;
