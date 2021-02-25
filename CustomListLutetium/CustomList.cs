@@ -86,20 +86,23 @@ namespace CustomListLutetium
         }
         public void Remove(T itemToRemove)
         {
-            T[] removeListArray = new T[capacity];
-
-            for (int i = 0; i > count; i++) // needs the ability to add so you can remove? 
+            T[] removeTemp = new T[capacity];
+            for (int i = 1; i < count; i++) // needs the ability to add so you can remove? 
             {
                 if (_items[i].Equals(itemToRemove))
                 {
-                    
-                    count--;
+                    for (int t = 0; t < count; t++)
+                    {
+                        _items[t] = _items[t + 1];
+                    }
+                    _items = removeTemp;
+
                 }
                 else
                 {
-                    removeListArray[i] = _items[i];
+                    removeTemp[i] = _items[i];
                 }
-                _items = removeListArray;
+                count--;
 
             }
         }

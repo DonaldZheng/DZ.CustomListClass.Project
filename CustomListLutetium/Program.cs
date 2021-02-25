@@ -12,6 +12,9 @@ namespace CustomListLutetium
         {
             
             CustomList<int> runTest = new CustomList<int>();
+            runTest.Add(1);
+            runTest.Add(2);
+            runTest.Add(3);
             runTest.Remove(2);
                  
         }
