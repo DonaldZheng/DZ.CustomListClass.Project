@@ -86,24 +86,21 @@ namespace CustomListLutetium
         }
         public void Remove(T itemToRemove)
         {
-            if (count != capacity)
-            {
-                T[] removeListArray = new T[capacity];
+            T[] removeListArray = new T[capacity];
 
-                for (int i = 0; i > count; i--)
+            for (int i = 0; i > count; i--)
+            {
+                if (_items[i].Equals(itemToRemove))
+                {
+                    count--;
+                }
+                else
                 {
                     removeListArray[i] = _items[i];
                 }
                 _items = removeListArray;
+
             }
-            _items[count] = itemToRemove;
-            count--;
         }
-
-        public void FindIndex()
-        {
-        
-        }
-
     }
 }

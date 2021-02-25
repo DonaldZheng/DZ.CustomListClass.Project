@@ -11,7 +11,9 @@ namespace CustomListLutetium
         static void Main(string[] args)
         {
             
-
+            CustomList<int> runTest = new CustomList<int>();
+            runTest.Remove(2);
+                 
         }
 
     }
