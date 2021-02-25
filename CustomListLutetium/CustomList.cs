@@ -88,10 +88,11 @@ namespace CustomListLutetium
         {
             T[] removeListArray = new T[capacity];
 
-            for (int i = 0; i > count; i--)
+            for (int i = 0; i > count; i++) // needs the ability to add so you can remove? 
             {
                 if (_items[i].Equals(itemToRemove))
                 {
+                    
                     count--;
                 }
                 else
