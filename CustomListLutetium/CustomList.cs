@@ -95,14 +95,14 @@ namespace CustomListLutetium
                     {
                         _items[t] = _items[t + 1];
                     }
-                    _items = removeTemp;
-
+                    count--;   
                 }
                 else
                 {
                     removeTemp[i] = _items[i];
                 }
-                count--;
+                _items = removeTemp;
+
 
             }
         }
