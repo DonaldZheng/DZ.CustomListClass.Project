@@ -75,16 +75,14 @@ namespace CustomListLutetium
                     tempList[i] = _items[i];
                 }
                 _items = tempList;
-
-                // create new array/ resize array 
-                // move items over 
-                // new array is now _items array
             }
             _items[count] = itemToAdd;
             count++;
-
+            // create new array/ resize array 
+            // move items over 
+            // new array is now _items array
         }
-        public void Remove(T itemToRemove)
+        public void Remove(T itemToRemove) // still not completed 
         {
             T[] removeTemp = new T[capacity];
             for (int i = 1; i < count; i++) // needs the ability to add so you can remove? 

@@ -21,10 +21,6 @@ namespace CustomListLutetiumUnitTesting
 
             //Assert 
             Assert.AreEqual(expected, actual);
-
-
-
-
         }
     }
 }
