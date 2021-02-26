@@ -34,7 +34,7 @@ namespace CustomListLutetiumUnitTesting
             int numberOne = 1;
             int numberTwo = 2;
             int numberThree = 3;
-            int expected = 1;
+            int expected = 2;
             int actual;
 
 
@@ -59,7 +59,7 @@ namespace CustomListLutetiumUnitTesting
             int numberFour = 4;
             int numberFive = 5;
             int numberSix = 6;
-            int expected = 4;
+            int expected = 3;
             int actual;
 
             //add
@@ -116,7 +116,7 @@ namespace CustomListLutetiumUnitTesting
             int numberThree = 3;
             int numberFour = 4;
             int numberFive = 5;
-            int expected = 5;
+            int expected = 3;
             int actual;
 
             returnTwoItemsToList.Add(numberOne);
@@ -127,7 +127,7 @@ namespace CustomListLutetiumUnitTesting
             returnTwoItemsToList.Remove(numberFive);
             returnTwoItemsToList.Remove(numberFour);
 
-            actual = returnTwoItemsToList[numberThree];
+            actual = returnTwoItemsToList[2];
 
             Assert.AreEqual(expected, actual);
 

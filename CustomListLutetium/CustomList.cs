@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomListLutetium
 {
-    public class CustomList<T>
+    public class CustomList<T> : IEnumerable
     {
         //member variables
         private T[] _items; // [] array
@@ -34,7 +35,6 @@ namespace CustomListLutetium
         }
         public T this[int index]
         {
-
             get
             {
                 if (index < 0 || index >= count)
@@ -97,32 +97,41 @@ namespace CustomListLutetium
                 {
                     removeTemp[t] = _items[i];
                 }
+                
             }
-            _items = removeTemp;
+         _items = removeTemp;
             if (isRemoved)
             {
                 count--;
             }
             return isRemoved;
         }
-        public void Remove2(T itemToRemove)
+        //public void Remove2(T itemToRemove)
+        //{
+        //    T[] removeTemp = new T[capacity];
+        //    for (int i = 1; i < count; i++) // needs the ability to add so you can remove? 
+        //    {
+        //        if (_items[i].Equals(itemToRemove))
+        //        {
+        //            for (int t = 0; t < count; t++)
+        //            {
+        //                _items[t] = _items[t + 1];
+        //            }
+        //            count--;
+        //        }
+        //        else
+        //        {
+        //            removeTemp[i] = _items[i];
+        //        }
+        //        _items = removeTemp;
+        //    }
+        //}
+
+        public IEnumerator GetEnumerator()
         {
-            T[] removeTemp = new T[capacity];
-            for (int i = 1; i < count; i++) // needs the ability to add so you can remove? 
+            for (int i = 0; i < count; i++)
             {
-                if (_items[i].Equals(itemToRemove))
-                {
-                    for (int t = 0; t < count; t++)
-                    {
-                        _items[t] = _items[t + 1];
-                    }
-                    count--;
-                }
-                else
-                {
-                    removeTemp[i] = _items[i];
-                }
-                _items = removeTemp;
+                yield return _items[i];
             }
         }
     }
