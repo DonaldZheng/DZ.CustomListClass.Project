@@ -52,7 +52,7 @@ namespace CustomListLutetium
                 }
                 _items[index] = value;
             }
-            
+
         }
 
 
@@ -82,7 +82,30 @@ namespace CustomListLutetium
             // move items over 
             // new array is now _items array
         }
-        public void Remove(T itemToRemove) // still not completed 
+        public bool Remove(T itemToRemove)
+        {
+            T[] removeTemp = new T[capacity];
+            bool isRemoved = false;
+            for (int i = 0, t = 0; i < count; i++, t++)
+            {
+                if (_items[i].Equals(itemToRemove) && isRemoved == false)
+                {
+                    t--;
+                    isRemoved = true;
+                }
+                else
+                {
+                    removeTemp[t] = _items[i];
+                }
+            }
+            _items = removeTemp;
+            if (isRemoved)
+            {
+                count--;
+            }
+            return isRemoved;
+        }
+        public void Remove2(T itemToRemove)
         {
             T[] removeTemp = new T[capacity];
             for (int i = 1; i < count; i++) // needs the ability to add so you can remove? 
@@ -93,16 +116,15 @@ namespace CustomListLutetium
                     {
                         _items[t] = _items[t + 1];
                     }
-                    count--;   
+                    count--;
                 }
                 else
                 {
                     removeTemp[i] = _items[i];
                 }
                 _items = removeTemp;
-
-
             }
         }
     }
+
 }
