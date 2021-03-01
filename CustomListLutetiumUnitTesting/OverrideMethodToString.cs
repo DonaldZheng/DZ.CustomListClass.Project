@@ -4,8 +4,9 @@ using CustomListLutetium;
 
 namespace CustomListLutetiumUnitTesting
 {
+    [TestClass]
 
-    class OverloadMethodToString // Charles said it's okay to have 3 examples and move on to my ToString Method in CustomList
+    public class OverrideMethodToString // Charles said it's okay to have 3 examples and move on to my ToString Method in CustomList
     {
         [TestMethod]
         public void String_ToEmpty_String()
@@ -23,7 +24,7 @@ namespace CustomListLutetiumUnitTesting
         }
 
         [TestMethod]
-        public void StringTo()
+        public void StringTo_FourNumbers()
         {
             //Arrange
             CustomList<int> list = new CustomList<int>();
@@ -42,12 +43,12 @@ namespace CustomListLutetiumUnitTesting
         }
 
         [TestMethod]
-        public void StringTo2()
+        public void StringTo_EightNumbers_UsingForLoop()
         {
             //Arrange
             int item = 8;
             CustomList<int> list = new CustomList<int>();
-            string expected = "1, 2, 3, 4, 5, 6, 7, 8"; 
+            string expected = "1, 2, 3, 4, 5, 6, 7, 8";
             string actual;
 
             //Act

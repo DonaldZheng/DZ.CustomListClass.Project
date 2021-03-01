@@ -104,6 +104,21 @@ namespace CustomListLutetium
             }
             return isRemoved;
         }
+
+        public override string ToString()
+        {
+            StringBuilder stringTemp = new StringBuilder(); // missing brackets in the Override Unit Test?
+            if (count > 0)
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    stringTemp.Append(_items[i].ToString());
+                }
+            }
+            return stringTemp.ToString();
+            
+            
+        }
         public IEnumerator GetEnumerator()
         {
             for (int i = 0; i < count; i++)
