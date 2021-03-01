@@ -28,7 +28,7 @@ namespace CustomListLutetiumUnitTesting
         {
             //Arrange
             CustomList<int> list = new CustomList<int>();
-            string expected = "1, 2, 3, 4"; // account for commas and space 
+            string expected = "1234"; // account for commas and space 
             string actual;
 
             //Act
@@ -48,7 +48,7 @@ namespace CustomListLutetiumUnitTesting
             //Arrange
             int item = 8;
             CustomList<int> list = new CustomList<int>();
-            string expected = "1, 2, 3, 4, 5, 6, 7, 8";
+            string expected = "01234567";
             string actual;
 
             //Act
