@@ -119,6 +119,12 @@ namespace CustomListLutetium
             
             
         }
+        public static CustomList<T> AddTwoInstances()
+        {
+            
+        }
+
+        //// sub one instance of a custom list from another instance: 10 points 
         public IEnumerator GetEnumerator()
         {
             for (int i = 0; i < count; i++)

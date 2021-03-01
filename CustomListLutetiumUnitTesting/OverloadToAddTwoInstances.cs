@@ -59,8 +59,8 @@ namespace CustomListLutetiumUnitTesting
             //Assert
             Assert.AreEqual(expected, actual);
         }
-
-        public void AddTwoInstance_WithListOneLonger()
+        [TestMethod]
+        public void MinusTwoInstance_WithListOneLonger()
         {
             CustomList<int> listOne = new CustomList<int>() { 1, 2, 2, 3, 3, 4, 4, 5, 5, 6 };
             CustomList<int> listTwo = new CustomList<int>() { 2, 3, 4, };
@@ -76,7 +76,7 @@ namespace CustomListLutetiumUnitTesting
             Assert.AreEqual(expected, actual);
 
         }
-
+        [TestMethod]
         public void AddTwoInstance_WithListTwoLonger()
         {
             CustomList<int> listOne = new CustomList<int>() { 2, 5 };
@@ -93,7 +93,7 @@ namespace CustomListLutetiumUnitTesting
             Assert.AreEqual(expected, actual);
 
         }
-
+        [TestMethod]
         public void AddTwoInstance_ListTwoWithNothing()
         {
             CustomList<int> listOne = new CustomList<int>() { 1, 3, 4, 7, 8, 9, 15, 100};
@@ -110,6 +110,5 @@ namespace CustomListLutetiumUnitTesting
             Assert.AreEqual(expected, actual);
 
         }
-
     }
 }
