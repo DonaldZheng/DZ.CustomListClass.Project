@@ -8,19 +8,24 @@ namespace CustomListLutetiumUnitTesting
     public class RemoveMethodUnitTests
     {
         [TestMethod]
-        public void Check_IndexOnList_Removed()
+        public void Check_IndexOnList_RemovedOneIndex_HaveTwoExpectedBack()
         {
             CustomList<int> indexNumber = new CustomList<int>();
 
             // Arrange 
-            int number = 3;
-            int expected = 3;
+            int numberOne = 1;
+            int numberTwo = 2;
+            int numberThree = 3;
+            int expected = 2;
             int actual;
 
 
             // Act
-            indexNumber.Remove(number);
-            actual = indexNumber[1];
+            indexNumber.Add(numberOne);
+            indexNumber.Add(numberTwo);
+            indexNumber.Add(numberThree);
+            indexNumber.Remove(numberOne);
+            actual = indexNumber[0];
 
             // Assert
             Assert.AreEqual(expected, actual);

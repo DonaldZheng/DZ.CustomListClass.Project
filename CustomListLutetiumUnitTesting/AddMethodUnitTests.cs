@@ -17,13 +17,13 @@ namespace CustomListLutetiumUnitTesting
             CustomList<int> indexNumber = new CustomList<int>();
 
             // Arrange 
-            int number = 5;
+            int numberOne = 5;
             int expected = 5;
             int actual;
 
 
             // Act
-            indexNumber.Add(number);
+            indexNumber.Add(numberOne);
             actual = indexNumber[0];
 
             // Assert

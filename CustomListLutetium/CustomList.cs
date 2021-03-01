@@ -22,7 +22,7 @@ namespace CustomListLutetium
                 return count; //read only prop
             }
         }
-        public int Capacity
+        public int Capacity // nevin's comment: change the size of items above
         {
             get
             {
@@ -39,7 +39,7 @@ namespace CustomListLutetium
             {
                 if (index < 0 || index >= count)
                 {
-                    throw new IndexOutOfRangeException("Input is out of range exception ");
+                    throw new ArgumentOutOfRangeException("Input is out of range exception ");
                 }
                 return _items[index];
             }
@@ -48,13 +48,12 @@ namespace CustomListLutetium
             {
                 if (index < 0 || index >= count)
                 {
-                    throw new IndexOutOfRangeException("Input is out of range exception ");
+                    throw new ArgumentOutOfRangeException("Input is out of range exception ");
                 }
                 _items[index] = value;
             }
 
         }
-
 
         //constructor
         public CustomList()
@@ -97,36 +96,14 @@ namespace CustomListLutetium
                 {
                     removeTemp[t] = _items[i];
                 }
-                
             }
-         _items = removeTemp;
+            _items = removeTemp;
             if (isRemoved)
             {
                 count--;
             }
             return isRemoved;
         }
-        //public void Remove2(T itemToRemove)
-        //{
-        //    T[] removeTemp = new T[capacity];
-        //    for (int i = 1; i < count; i++) // needs the ability to add so you can remove? 
-        //    {
-        //        if (_items[i].Equals(itemToRemove))
-        //        {
-        //            for (int t = 0; t < count; t++)
-        //            {
-        //                _items[t] = _items[t + 1];
-        //            }
-        //            count--;
-        //        }
-        //        else
-        //        {
-        //            removeTemp[i] = _items[i];
-        //        }
-        //        _items = removeTemp;
-        //    }
-        //}
-
         public IEnumerator GetEnumerator()
         {
             for (int i = 0; i < count; i++)
