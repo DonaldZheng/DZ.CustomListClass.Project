@@ -43,5 +43,40 @@ namespace CustomListLutetiumUnitTesting
             //Assert 
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void AddTwoInstance_SubtractNumbers_FromSecondList()
+        {
+            CustomList<int> listOne = new CustomList<int>() { 1, 2, 3, 4, 5, 6 };
+            CustomList<int> listTwo = new CustomList<int>() { 1, 3, 5 };
+
+            //Arrange 
+            CustomList<int> expected = new CustomList<int>() { 2, 4, 6 };
+            CustomList<int> actual;
+
+            //Act
+            actual = listOne - listTwo;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        public void AddTwoInstance_WithListOneLonger()
+        {
+            CustomList<int> listOne = new CustomList<int>() { 1, 2, 2, 3, 3, 4, 4, 5, 5, 6 };
+            CustomList<int> listTwo = new CustomList<int>() { 2, 3, 4, };
+
+            // Arrange 
+            CustomList<int> expected = new CustomList<int>() { 1, 2, 3, 4, 5, 5,6 };
+            CustomList<int> actual;
+
+            // Act 
+            actual = listOne - listTwo;
+
+            //Assert 
+            Assert.AreEqual(expected, actual);
+
+
+        }
+
     }
 }

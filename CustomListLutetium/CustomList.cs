@@ -107,12 +107,12 @@ namespace CustomListLutetium
 
         public override string ToString()
         {
-            StringBuilder stringTemp = new StringBuilder(); // missing brackets in the Override Unit Test?
+            StringBuilder stringTemp = new StringBuilder(); // Brett said StringBuilder is okay to use
             if (count > 0)
             {
                 for (int i = 0; i < count; i++)
                 { 
-                    stringTemp.Append(_items[i].ToString());
+                    stringTemp.Append(_items[i].ToString()); //Append(add) 
                 }
             }
             return stringTemp.ToString();
