@@ -123,8 +123,18 @@ namespace CustomListLutetium
         {
             
         }
+        //add two instances of a custom list class together: 10 points 
+        public static CustomList<T> operator + (CustomList<T> listOne, CustomList<T> listTwo) // use "operators" to declare an operator in overload 
+        {
+        
+        }
 
-        //// sub one instance of a custom list from another instance: 10 points 
+        //sub one instance of a custom list from another instance: 10 points 
+
+        public static CustomList<T> operator - (CustomList<T> listOne, CustomList<T> listTwo) // use "operators" to declare an operator in overload 
+        {
+        
+        }
         public IEnumerator GetEnumerator()
         {
             for (int i = 0; i < count; i++)
