@@ -119,21 +119,28 @@ namespace CustomListLutetium
             
             
         }
-        public static CustomList<T> AddTwoInstances()
-        {
-            
-        }
+
         //add two instances of a custom list class together: 10 points 
         public static CustomList<T> operator + (CustomList<T> listOne, CustomList<T> listTwo) // use "operators" to declare an operator in overload 
         {
-        
+            CustomList<T> OperatorAdd = new CustomList<T>();
+            for (int i = 0; i < listOne.Count; i++)
+            {
+                OperatorAdd.Add(listOne[i]);
+            }
+            for (int i = 0; i < listTwo.Count; i++)
+            {
+                OperatorAdd.Add(listTwo[i]);
+            }
+            return OperatorAdd;
         }
 
         //sub one instance of a custom list from another instance: 10 points 
 
         public static CustomList<T> operator - (CustomList<T> listOne, CustomList<T> listTwo) // use "operators" to declare an operator in overload 
         {
-        
+            CustomList<T> OperatorSub = new CustomList<T>();
+            return OperatorSub;
         }
         public IEnumerator GetEnumerator()
         {
