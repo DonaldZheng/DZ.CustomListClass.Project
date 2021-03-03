@@ -126,11 +126,11 @@ namespace CustomListLutetium
             CustomList<T> OperatorAdd = new CustomList<T>();
             for (int i = 0; i < listOne.Count; i++)
             {
-                OperatorAdd.Add(listOne[i]);
+                OperatorAdd.Add(listOne[i]); // add list one index i in OperatorAdd
             }
             for (int i = 0; i < listTwo.Count; i++)
             {
-                OperatorAdd.Add(listTwo[i]);
+                OperatorAdd.Add(listTwo[i]); // ""
             }
             return OperatorAdd;
         }
@@ -140,6 +140,16 @@ namespace CustomListLutetium
         public static CustomList<T> operator - (CustomList<T> listOne, CustomList<T> listTwo) // use "operators" to declare an operator in overload 
         {
             CustomList<T> OperatorSub = new CustomList<T>();
+            for (int i = 0; i < listOne.Count; i++)
+            {
+                for (int i = 0; i < listTwo.Count; i++)
+                {
+                    if (listOne.)
+                    {
+                       listTwo.Remove // remove from class two subtract {1,3,5} - {2,1,6} = {3,5}
+                    }
+                }
+            }
             return OperatorSub;
         }
         public IEnumerator GetEnumerator()
