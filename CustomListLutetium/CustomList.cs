@@ -140,13 +140,13 @@ namespace CustomListLutetium
         public static CustomList<T> operator - (CustomList<T> listOne, CustomList<T> listTwo) // use "operators" to declare an operator in overload 
         {
             CustomList<T> OperatorSub = new CustomList<T>();
-            for (int i = 0; i < listOne.Count; i++)
+            for (int i = 0; i < listOne.Count; i++) // reference the remove method above 
             {
-                for (int i = 0; i < listTwo.Count; i++)
+                for (int t = 0; t < listTwo.Count; t++)
                 {
-                    if (listOne.)
+                    if (listOne._items[i] == listTwo._items[t]) // if list are both equal
                     {
-                       listTwo.Remove // remove from class two subtract {1,3,5} - {2,1,6} = {3,5}
+                        listTwo.Remove(t); // remove from class two subtract {1,3,5} - {2,1,6} = {3,5}
                     }
                 }
             }
